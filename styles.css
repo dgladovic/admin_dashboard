@@ -9,12 +9,19 @@ body{
     height: 800px;
     display: grid;
     grid-template-columns: minmax(250px,2fr) 6fr;
-    grid-template-rows: 200px 1fr;
+    grid-template-rows: 150px 1fr;
 }
 
 #dashboard{
     grid-area: 1/1/3/2;
     background-color: lightblue;
+    display: grid;
+    grid-template-rows: 80px 40px repeat(10,50px);
+    gap: 2px;
+}
+
+#home{
+    background-color: green;
 }
 
 #main_content{
@@ -43,5 +50,27 @@ body{
 .tile{
     background-color: red;
     border-radius: 10px;
+}
+
+#announcements{
+    padding-right: 12px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
+#announcements > .title{
+    grid-area: 1/1/2/2;
+    background-color: yellow;
+}
+
+#trending{
+    padding-right: 12px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+}
+
+#trending > .title{
+    grid-area: 1/1/2/2;
+    background-color: yellow;
 }
 
