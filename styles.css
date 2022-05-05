@@ -74,3 +74,29 @@ body{
     background-color: yellow;
 }
 
+#header{
+    display: grid;
+    grid-template-columns: 450px 1fr 1fr 1fr;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: "search account account account"
+    "greeting button button button";
+}
+
+#search{
+    grid-area: search;
+    background-color: green;
+}
+
+#greeting{
+    grid-area: greeting;
+    background-color: blue;
+}
+
+#account{
+    grid-area: account;
+    background-color: yellow;
+}
+.button{
+    grid: button;
+    background-color: pink;
+}
