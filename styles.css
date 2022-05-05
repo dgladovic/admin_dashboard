@@ -1,6 +1,6 @@
-*{
+/* *{
     border: solid red 1px;
-}
+} */
 
 body{
     margin: 0px;
@@ -31,24 +31,31 @@ body{
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
+    background-color: rgb(222,228,238);;
 }
 
 #bigbanner{
     grid-area: 1/1/3/2;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 60px 1fr 1fr 1fr;
+    grid-template-rows: 25px 1fr 1fr 1fr;
     gap: 12px;
     padding: 12px;
 }
 
 .title{
     grid-area: 1/1/2/3;
-    background-color: white;
+    padding-top: 10px;
+}
+
+.title h3{
+    margin-top: 0px;
+    font-size: 18px;
 }
 
 .tile{
-    background-color: red;
+    box-shadow: inset 10px 0px gold;
+    background-color: white;
     border-radius: 10px;
 }
 
@@ -99,4 +106,39 @@ body{
 .button{
     grid: button;
     background-color: pink;
+}
+
+
+.tile{
+    padding-left: 25px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.tile h4{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.tile > p{
+    font-size: 14px;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.functions{
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: -30px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+}
+
+.favorite,
+.eye,
+.share{
+    width: 20px;
+    height: 20px;
 }
