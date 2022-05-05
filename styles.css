@@ -2,6 +2,8 @@
     border: solid red 1px;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
 body{
     margin: 0px;
     padding: 0px;
@@ -49,6 +51,7 @@ body{
 }
 
 .title h3{
+    font-family: 'Roboto', sans-serif;
     margin-top: 0px;
     font-size: 18px;
 }
@@ -118,11 +121,15 @@ body{
 }
 
 .tile h4{
+    font-family: 'Roboto', sans-serif;
+
     margin-top: 0px;
     margin-bottom: 0px;
 }
 .tile > p{
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    color: rgb(132, 135, 138);
     margin-top: 0px;
     margin-bottom: 50px;
 }
