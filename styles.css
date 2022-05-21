@@ -301,6 +301,12 @@ body{
         display: flex;
         align-items: center;
     }
+    .piccon>img{
+        border-radius: 16px;
+        margin-left: 20px;
+        height: 32px;
+        width: 32px;
+    }
     .piccon div{
         margin-left: 15px;
         display: flex;
@@ -322,12 +328,7 @@ body{
         font-family: sans-serif;
         margin: 0px;
     }
-    .piccon>img{
-        border-radius: 20px;
-        margin-left: 20px;
-        height: 32px;
-        width: auto;
-    }
+    
 
 
 
