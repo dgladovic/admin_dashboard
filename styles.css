@@ -41,7 +41,6 @@ body{
         padding-top: 13px;
         padding-left: 10px;
     }
-
     .komadic{
         display: flex;
         flex-direction: row;
@@ -62,6 +61,115 @@ body{
         padding-left: 10px;
     }
 
+
+#header{
+        display: grid;
+        grid-template-columns: 450px 1fr 1fr 1fr;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: "search account account account"
+        "greeting button button button";
+}
+    #search{
+            grid-area: search;
+            background-color: white;
+            display: flex;
+            align-items: center;
+    }
+        #search>img{
+                width: auto;
+                height: 24px;
+                margin-left: 30px;
+        }
+        #search>input{
+                padding-left: 15px;
+                margin-left: 15px;
+                border: 0px;
+                border-radius: 20px;
+                width: 360px;
+                height: 24px;
+                font-size: 18px;
+                background-color: rgb(222,228,238);
+        }
+    #greeting{
+            grid-area: greeting;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+    }
+        #greeting>img{
+                margin-top: 12.5px;
+                margin-left: 30px;
+                height: 60px;
+                width: auto;
+                border-radius: 30px;
+        }
+        #greeting>div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+        }
+        #greeting>div>h4{
+                margin: 0px;
+                margin-left: 15px;
+                padding: 0px;
+                font-family: "Roboto";
+        }
+        #greeting>div>h2{
+                margin: 0px;
+                margin-left: 15px;
+                padding: 0px;
+                font-family: "Roboto";
+        }
+    #account{
+            grid-area: account;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+        #account>img{
+                margin-left: 20px;
+                height: 20px;
+                width: auto;
+        }
+        #account>img~img{
+                margin-right: 20px;
+                height: 40px;
+                border-radius: 20px;
+                width: auto;
+        }
+        #account>h3{
+                font-family: "Roboto";;
+        }
+    .button{
+            grid-area: button;
+            background-color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-right: 15px;
+    }
+        .button button{
+            border: 0px;
+            border-radius: 20px;
+            height: 32px;
+            width: 80px;
+            background-color: rgb(23,135,206);
+            color: white;
+            font-family: sans-serif;
+        }
+        .button button:hover{
+            border: 2px solid;
+            border-color: rgb(23,135,206);
+            border-radius: 20px;
+            height: 32px;
+            width: 80px;
+            background-color: white;
+            color: rgb(23,135,206);
+            font-family: sans-serif;
+        }
+
+
 #main_content{
     grid-area: 2/2/3/3;
     overflow: auto;
@@ -71,7 +179,6 @@ body{
     gap: 10px;
     background-color: rgb(222,228,238);
 }
-
     #bigbanner{
         grid-area: 1/1/3/2;
         display: grid;
@@ -80,194 +187,149 @@ body{
         gap: 12px;
         padding: 12px;
     }
-
     .title{
         grid-area: 1/1/2/3;
         padding-top: 10px;
     }
-
     .title h3{
         font-family: 'Roboto', sans-serif;
         margin-top: 0px;
         font-size: 18px;
     }
-
     .tile{
         box-shadow: inset 10px 0px gold;
         background-color: white;
         border-radius: 10px;
-    }
-
-    .functions{
-        margin-left: auto;
-        margin-bottom: 10px;
-        margin-right: -30px;
+        padding-left: 25px;
+        padding-right: 30px;
         display: flex;
-        justify-content: space-evenly;
-        width: 100px;
+        flex-direction: column;
+        justify-content: end;
     }
-    
-    .favorite,
-    .eye,
-    .share{
-        width: 20px;
-        height: 20px;
-    }
-
+        .tile h4{
+            font-family: 'Roboto', sans-serif;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .tile > p{
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            color: rgb(132, 135, 138);
+            margin-top: 0px;
+            margin-bottom: 50px;
+        }
+        .functions{
+            margin-left: auto;
+            margin-bottom: 10px;
+            margin-right: -30px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100px;
+        }
+        .favorite,
+        .eye,
+        .share{
+            width: 20px;
+            height: 20px;
+        }
 #announcements{
     padding-right: 12px;
     display: grid;
     grid-template-rows: 60px 1fr;
 }
-
     #announcements > .title{
-        grid-area: 1/1/2/2;
-        background-color: yellow;
+    grid-area: 1/1/2/2;
+    background-color: rgb(222,228,238);
     }
+    #announcements > .title h3{
+        font-family: "Roboto";
+        padding-top: 20px;
+    }
+    #announcements .content{
+        margin-bottom: 12px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .texcon{
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 10px;
+        padding-bottom: 5px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .content>.texcon ~ .texcon{
+        border-top: 1.5px solid rgba(95, 95, 95, 0.4);
+    }
+    .texcon h4{
+        font-family: "Roboto";
+        margin: 0px;
+    }
+    .texcon p{
+        margin: 0px;
+        font-size: 14px;
+        color: gray;
+    }
+
 
 #trending{
     padding-right: 12px;
     display: grid;
     grid-template-rows: 60px 1fr;
 }
-
+    #trending .content{
+        margin-bottom: 12px;
+        border-radius: 15px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
     #trending > .title{
         grid-area: 1/1/2/2;
-        background-color: yellow;
+        background-color: rgb(222,228,238);
     }
-
-#header{
-    display: grid;
-    grid-template-columns: 450px 1fr 1fr 1fr;
-    grid-template-rows: 60px 1fr;
-    grid-template-areas: "search account account account"
-    "greeting button button button";
-}
-
-    #search{
-        grid-area: search;
-        background-color: white;
+    #trending > .title h3{
+        font-family: "Roboto";
+        padding-top: 20px;
+    }
+    .piccon{
         display: flex;
         align-items: center;
     }
-        #search>img{
-            width: auto;
-            height: 24px;
-            margin-left: 30px;
-        }
-        #search>input{
-            padding-left: 15px;
-            margin-left: 15px;
-            border: 0px;
-            border-radius: 20px;
-            width: 360px;
-            height: 24px;
-            font-size: 18px;
-            background-color: rgb(222,228,238);
-        }
-
-
-    #greeting{
-        grid-area: greeting;
-        background-color: white;
+    .piccon div{
+        margin-left: 15px;
         display: flex;
-        flex-direction: row;
-    }
-        #greeting>img{
-            margin-top: 12.5px;
-            margin-left: 30px;
-            height: 60px;
-            width: auto;
-            border-radius: 30px;
-        }
-        #greeting>div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        #greeting>div>h4{
-            margin: 0px;
-            margin-left: 15px;
-            padding: 0px;
-            font-family: "Roboto";
-        }
-        #greeting>div>h2{
-            margin: 0px;
-            margin-left: 15px;
-            padding: 0px;
-            font-family: "Roboto";
-        }
-
-    #account{
-        grid-area: account;
-        background-color: white;
-        display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
     }
-        #account>img{
-            margin-left: 20px;
-            height: 20px;
-            width: auto;
-        }
-        #account>img~img{
-            margin-right: 20px;
-            height: 40px;
-            border-radius: 20px;
-            width: auto;
-        }
-        #account>h3{
-            font-family: "Roboto";;
-        }
-    .button{
-        grid-area: button;
-        background-color: white;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding-right: 15px;
+    .piccon a{
+        color: black;
+        margin: 0px;
+        display: inline-block;
     }
-    .button button{
-        border: 0px;
-        border-radius: 20px;
-        height: 32px;
-        width: 80px;
-        background-color: rgb(23,135,206);
-        color: white;
+    .piccon a:visited{
+        color: black;
+        margin: 0px;
+        display: inline-block;
+    }
+    .piccon p{
+        font-size: 12px;
         font-family: sans-serif;
+        margin: 0px;
     }
-
-    .button button:hover{
-        border: 2px solid;
-        border-color: rgb(23,135,206);
+    .piccon>img{
         border-radius: 20px;
+        margin-left: 20px;
         height: 32px;
-        width: 80px;
-        background-color: white;
-        color: rgb(23,135,206);
-        font-family: sans-serif;
+        width: auto;
     }
 
 
-.tile{
-    padding-left: 25px;
-    padding-right: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-}
 
-.tile h4{
-    font-family: 'Roboto', sans-serif;
 
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
-.tile > p{
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    color: rgb(132, 135, 138);
-    margin-top: 0px;
-    margin-bottom: 50px;
-}
 
